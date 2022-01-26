@@ -27,13 +27,15 @@ Deshalb habe ich wieder einen neuen Roboter und eine neue Strategie erstellt. Di
 
 Um die Strategie zu veranschaulichen, füge ich hier ein kleines Video hinzu: 
 
-https://user-images.githubusercontent.com/89132005/151145722-7619f121-91fa-44e8-bd9c-8163cfa3dd76.mp4
+https://user-images.githubusercontent.com/89132005/151148768-87d62283-3218-4b20-9c7a-aa2c9867a55d.mp4
 
 In diesem Video sieht man, dass der Roboter in den Ecken geht und von dort die Roboter abschiesst. Da die Roboter hier sich nicht bewegt haben, war die Strategie ziemlich einfach, um zu gewinnen. Jedoch war diese Situation im echten Kampf nicht so, da die Roboter da sich bewegten. Dabei hatte ich Probleme und habe mein Roboter so programmiert, dass er dann andere angreift. Hier zeige ich Ihnen einen Auschnitt von diesem Teil:
 
 ```java
 	while (true) {
 			if (others < 10){
+
+
 				ahead(500); // Move ahead 500
 				turnRight(200);
 				turnGunRight(360); // Spin gun around
