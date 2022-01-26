@@ -95,4 +95,4 @@ Da dieses Projekt nicht wie das letzte Projekt eine Einzelarbeit war, konnte ich
 
 Jedoch steht bei mir der Verbesserungsvorschlag für dieses Projekt fest: 
 
-*Ich habe manchmal viel zu lange gewartet bis ich Herrn Colic (unser Informatiklehrer) um Hilfe gebeten habe, und dieser hatte dann meistens viel zu tun und konnte mir nicht direkt helfen, was dazu geführt hatte, dass ich manchmal sehr wenig arbeiten konnte und nicht gerade produktiv war.*
+*Ich habe manchmal viel zu lange gewartet bis ich Herrn Colic (unser Informatiklehrer) um Hilfe gebeten habe, und dieser hatte dann meistens viel zu tun und konnte mir nicht direkt helfen, was dazu geführt hatte, dass ich manchmal sehr wenig arbeiten konnte und nicht gerade produktiv war.* Lieber sollte ich, wenn das Problem gross ist, sofort den Lehrer fragen oder wenn es klein ist, dann sollte ich im Internet oder auch meine Mitschüler/innen nach Hilfe fragen.
