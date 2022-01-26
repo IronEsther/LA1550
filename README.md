@@ -32,52 +32,48 @@ https://user-images.githubusercontent.com/89132005/151148768-87d62283-3218-4b20-
 In diesem Video sieht man, dass der Roboter in den Ecken geht und von dort die Roboter abschiesst. Da die Roboter hier sich nicht bewegt haben, war die Strategie ziemlich einfach, um zu gewinnen. Jedoch war diese Situation im echten Kampf nicht so, da die Roboter da sich bewegten. Dabei hatte ich Probleme und habe mein Roboter so programmiert, dass er dann andere angreift. Hier zeige ich Ihnen einen Auschnitt von diesem Teil:
 
 ```java
-	while (true) {
-			if (others < 10){
+while (true) {
+	if (others < 10){
+		ahead(500); // Move ahead 500
+		turnRight(200);
+		turnGunRight(360); // Spin gun around
+		back(200); // Move back 200
+		turnGunRight(360); // Spin gun around
+		turnLeft(200);
+	}
+	else if (others > 10) {
+		if(robotX > fieldWidth/2) {
+			turnTo(90);
+			position = 1;
+	} else {
+		turnTo(-90);
+		position = 3;
+	}
 
+	// Robot main loop
+	int scanStart = -1;
+	while(true) {
+		ahead(100);		
+		if (scanStart == -1) {
+			turnGunLeft(360);
+		} else {
+			turnGunTo(scanStart);
+			turnGunLeft(90);
+		}
+		out.println(position);
 
-				ahead(500); // Move ahead 500
-				turnRight(200);
-				turnGunRight(360); // Spin gun around
-				back(200); // Move back 200
-				turnGunRight(360); // Spin gun around
-				turnLeft(200);
-			}
-			else if (others > 10) {
-				if(robotX > fieldWidth/2) {
-				turnTo(90);
-				position = 1;
-				} else {
-				turnTo(-90);
-				position = 3;
-				}
-
-				// Robot main loop
-				int scanStart = -1;
-				while(true) {
-					ahead(100);
-			
-					if (scanStart == -1) {
-						turnGunLeft(360);
-					} else {
-						turnGunTo(scanStart);
-						turnGunLeft(90);
-					}
-			
-					out.println(position);
-
-					switch (position) {
-						case 1:	scanStart = -90;
-							break;
-						case 2:	scanStart = 0;
-							break;
-						case 3:	scanStart = 180;
-							break;
-						case 4:	scanStart = 90;
-							break;
-					}	
-				}
-			}
+		switch (position) {
+			case 1:	scanStart = -90;
+				break;
+			case 2:	scanStart = 0;
+				break;
+			case 3:	scanStart = 180;
+				break;
+			case 4:	scanStart = 90;
+				break;
+		}	
+	}
+}
 ```
 
 Hier wird gezeigt, dass wenn es weniger als zehn Gegner hat, dann sollte der Roboter ins Feld fahren. Dies hat zum Glück ziemlich gut funktioniert, jedoch ist der Roboter manchmal einfach stehen geblieben.
